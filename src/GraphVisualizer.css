@@ -1,13 +1,13 @@
 .graph-container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 20px auto;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-  font-family: Arial, sans-serif;
-  transition: background 0.3s, color 0.3s;
-  position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    font-family: Arial, sans-serif;
+    transition: background 0.3s, color 0.3s;
+    position: relative;
 }
 
 .graph-container.light { background: #fff; color: #2c3e50; }
@@ -19,12 +19,12 @@
 .graph-header p { font-size: 16px; font-weight: bold; }
 
 .toolbar {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 15px;
-  padding: 10px;
-  border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+    padding: 10px;
+    border-radius: 6px;
 }
 
 .graph-container.light .toolbar { background: #ecf0f1; }
@@ -32,12 +32,12 @@
 .graph-container.neon .toolbar { background: #222; }
 
 .toolbar button, .theme-select {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: all 0.2s;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.2s;
 }
 
 .toolbar button { background: #bdc3c7; }
@@ -53,12 +53,12 @@
 .graph-container.neon .theme-select { background: #333; color: #0ff; }
 
 .controls {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-bottom: 20px;
-  padding: 15px;
-  border-radius: 6px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 6px;
 }
 
 .graph-container.light .controls { background: #f8f9fa; }
@@ -72,28 +72,28 @@
 .graph-container.neon .control-group label { color: #0ff; }
 
 .control-group select, .control-group input {
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
-  min-width: 100px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    min-width: 100px;
 }
 
 .graph-container.dark .control-group select, .graph-container.dark .control-group input { 
-  background: #2c3e50; color: #ecf0f1; border-color: #444; 
+    background: #2c3e50; color: #ecf0f1; border-color: #444; 
 }
 .graph-container.neon .control-group select, .graph-container.neon .control-group input { 
-  background: #333; color: #0ff; border-color: #666; 
+    background: #333; color: #0ff; border-color: #666; 
 }
 
 .button-group { display: flex; gap: 10px; align-items: flex-end; }
 button {
-  padding: 8px 16px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 14px;
-  transition: background 0.2s;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.2s;
 }
 
 button.secondary { background: #e74c3c; color: white; }
@@ -105,22 +105,22 @@ button.primary:hover:not(:disabled) { background: #2980b9; }
 .graph-container.neon button.primary:hover:not(:disabled) { background: #c0f; }
 
 .floating-submit {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 10;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
 }
 
 .stats {
-  margin: 10px 0;
-  font-size: 14px;
-  text-align: center;
+    margin: 10px 0;
+    font-size: 14px;
+    text-align: center;
 }
 
 .results-panel {
-  margin: 20px 0;
-  padding: 15px;
-  border-radius: 6px;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 6px;
 }
 
 .graph-container.light .results-panel { background: #f8f9fa; }
@@ -131,16 +131,16 @@ button.primary:hover:not(:disabled) { background: #2980b9; }
 .graph-container.neon .results-panel h3 { color: #0ff; }
 
 .distances-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 10px;
 }
 
 .distance-item {
-  display: flex;
-  justify-content: space-between;
-  padding: 8px;
-  border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    border-radius: 4px;
 }
 
 .graph-container.light .distance-item { background: white; }
@@ -150,23 +150,23 @@ button.primary:hover:not(:disabled) { background: #2980b9; }
 .leaderboard { margin-top: 20px; }
 .leaderboard ul { list-style: none; padding: 0; }
 .leaderboard li {
-  padding: 5px;
-  background: rgba(255, 255, 255, 0.8);
-  margin: 5px 0;
-  border-radius: 4px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.8);
+    margin: 5px 0;
+    border-radius: 4px;
 }
 .graph-container.dark .leaderboard li { background: rgba(52, 73, 94, 0.8); }
 .graph-container.neon .leaderboard li { background: rgba(0, 255, 255, 0.2); color: #0ff; }
 
 .graph-canvas {
-  width: 100%;
-  height: auto;
-  min-height: 400px;
-  max-height: 80vh;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
-  cursor: crosshair;
+    width: 100%;
+    height: auto;
+    min-height: 400px;
+    max-height: 80vh;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    cursor: crosshair;
 }
 
 .graph-container.light .graph-canvas { background: #fff; }
@@ -174,9 +174,9 @@ button.primary:hover:not(:disabled) { background: #2980b9; }
 .graph-container.neon .graph-canvas { background: #000; border-color: #666; }
 
 .node {
-  stroke-width: 2px;
-  cursor: move;
-  transition: transform 0.2s;
+    stroke-width: 2px;
+    cursor: move;
+    transition: transform 0.2s;
 }
 
 .node:hover { transform: scale(1.1); }
@@ -194,23 +194,23 @@ button.primary:hover:not(:disabled) { background: #2980b9; }
 .graph-container.neon .node.user-selected { fill: #ff0; stroke: #cc0; }
 
 .node.visited {
-  fill: #9b59b6; /* Purple for visited nodes in BFS/DFS/Prim's */
-  stroke: #8e44ad;
+    fill: #9b59b6; /* Purple for visited nodes in BFS/DFS/Prim's */
+    stroke: #8e44ad;
 }
 
 .graph-container.neon .node.visited {
-  fill: #ff00ff; /* Magenta for neon theme */
-  stroke: #cc00cc;
+    fill: #ff00ff; /* Magenta for neon theme */
+    stroke: #cc00cc;
 }
 
 .node.scc-node {
-  fill: #e67e22; /* Orange for nodes in SCCs (Tarjan's) */
-  stroke: #d35400;
+    fill: #e67e22; /* Orange for nodes in SCCs (Tarjan's) */
+    stroke: #d35400;
 }
 
 .graph-container.neon .node.scc-node {
-  fill: #ffa500; /* Bright orange for neon theme */
-  stroke: #ff8c00;
+    fill: #ffa500; /* Bright orange for neon theme */
+    stroke: #ff8c00;
 }
 
 .normal-edge { stroke-width: 2; transition: stroke 0.2s; }
@@ -219,42 +219,50 @@ button.primary:hover:not(:disabled) { background: #2980b9; }
 .graph-container.neon .normal-edge { stroke: url(#neonGradient); }
 
 .path-edge {
-  stroke: #2ecc71; /* Green for shortest paths */
-  stroke-width: 4;
-  stroke-linecap: round;
-  animation: lightning 0.5s infinite alternate;
+    stroke: #2ecc71; /* Green for shortest paths */
+    stroke-width: 4;
+    stroke-linecap: round;
+    animation: lightning 0.5s infinite alternate;
 }
 .graph-container.neon .path-edge { stroke: #0f0; }
 
 .user-edge {
-  stroke: #f1c40f; /* Yellow for user-selected paths */
-  stroke-width: 3;
-  stroke-dasharray: 5;
+    stroke: #f1c40f; /* Yellow for user-selected paths */
+    stroke-width: 3;
+    stroke-dasharray: 5;
 }
 .graph-container.neon .user-edge { stroke: #ff0; }
 
-.mst-edge {
-  stroke: #e74c3c; /* Red for MST edges */
-  stroke-width: 3;
-  stroke-linecap: round;
+.mst-edge-intermediate {
+    stroke: #f39c12; /* Orange for intermediate MST edges */
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-dasharray: 5;
 }
-.graph-container.neon .mst-edge { stroke: #ff0000; }
+.graph-container.neon .mst-edge-intermediate { stroke: #ffa500; }
+
+.mst-edge-final {
+    stroke: #e74c3c; /* Red for final MST edges */
+    stroke-width: 3;
+    stroke-linecap: round;
+}
+.graph-container.neon .mst-edge-final { stroke: #ff0000; }
 
 .weight-label {
-  font-size: 14px;
-  font-weight: bold;
-  text-anchor: middle;
-  pointer-events: none;
+    font-size: 14px;
+    font-weight: bold;
+    text-anchor: middle;
+    pointer-events: none;
 }
 .graph-container.light .weight-label { fill: #e74c3c; }
 .graph-container.dark .weight-label { fill: #e74c3c; }
 .graph-container.neon .weight-label { fill: #ff0; }
 
 .node-label {
-  font-size: 16px;
-  font-weight: bold;
-  text-anchor: middle;
-  pointer-events: none;
+    font-size: 16px;
+    font-weight: bold;
+    text-anchor: middle;
+    pointer-events: none;
 }
 .graph-container.light .node-label { fill: white; }
 .graph-container.dark .node-label { fill: #ecf0f1; }
@@ -266,26 +274,26 @@ button.primary:hover:not(:disabled) { background: #2980b9; }
 .graph-container.neon .deletable:hover .node { fill: #f00; stroke: #cc0000; }
 
 .tooltip {
-  background: rgba(0, 0, 0, 0.8);
-  color: white;
-  padding: 5px 10px;
-  border-radius: 4px;
-  font-size: 12px;
-  pointer-events: none;
-  z-index: 20;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 20;
 }
 
 @keyframes pulse {
-  0% { transform: scale(1); }
-  50% { transform: scale(1.2); }
-  100% { transform: scale(1); }
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
 }
 
 @keyframes lightning {
-  0% { stroke-opacity: 1; stroke-width: 4; }
-  20% { stroke-opacity: 0.6; stroke-width: 5; }
-  40% { stroke-opacity: 1; stroke-width: 3; }
-  60% { stroke-opacity: 0.8; stroke-width: 6; }
-  80% { stroke-opacity: 1; stroke-width: 4; }
-  100% { stroke-opacity: 0.7; stroke-width: 5; }
+    0% { stroke-opacity: 1; stroke-width: 4; }
+    20% { stroke-opacity: 0.6; stroke-width: 5; }
+    40% { stroke-opacity: 1; stroke-width: 3; }
+    60% { stroke-opacity: 0.8; stroke-width: 6; }
+    80% { stroke-opacity: 1; stroke-width: 4; }
+    100% { stroke-opacity: 0.7; stroke-width: 5; }
 }
