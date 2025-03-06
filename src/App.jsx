@@ -1,10 +1,16 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { runDijkstra } from './dijkstra';
-import { runBFS, runDFS, runTopologicalSort, runPrims, runKruskals, runTarjans, runBellmanFord } from './algorithm.jsx';
+import { runDijkstra } from './algorithms/dijkstra';
+import { runBFS } from './algorithms/bfs';
+import { runDFS } from './algorithms/dfs';
+import { runTopologicalSort } from './algorithms/topologicalSort';
+import { runPrims } from './algorithms/prims';
+import { runKruskals } from './algorithms/kruskals';
+import { runTarjans } from './algorithms/tarjans';
+import { runBellmanFord } from './algorithms/bellmanFord';
 import { Howl } from 'howler';
 import './GraphVisualizer.css';
 
-const Toolbar = ({ mode, setMode, gameState, onFindDijkstra, onStepDijkstra, onFindBFS, onStepBFS, onFindDFS, onStepDFS, onTopoSort, onPrims, onKruskals, onTarjans, onBellmanFord, onStartGame, onSave, onLoad, onUndo, onRedo, onReset, canUndo, canRedo }) => (
+const Toolbar = ({ mode, setMode, gameState, onFindDijkstra, onStepDijkstra, onFindBFS, onStepBFS, onFindDFS, onStepDFS, onTopoSort, onPrims, onKruskals, onTarjans, onBellmanFord, onStartGame, onSave, onLoad, onReset, onUndo, onRedo, canUndo, canRedo }) => (
     <div className="toolbar">
         <button className={mode === 'addNode' ? 'active' : ''} onClick={() => setMode('addNode')} disabled={gameState === 'playing'} aria-label="Add a new node">Add Node</button>
         <button className={mode === 'addEdge' ? 'active' : ''} onClick={() => setMode('addEdge')} disabled={gameState === 'playing'} aria-label="Add an edge">Add Edge</button>
@@ -806,9 +812,8 @@ const GraphVisualizer = () => {
                         Math.abs(shortestPath.indexOf(edge.start) - shortestPath.indexOf(edge.end)) === 1;
                     const isInUserPath = userPath.includes(edge.start) && userPath.includes(edge.end) &&
                         Math.abs(userPath.indexOf(edge.start) - userPath.indexOf(edge.end)) === 1;
-                    const mstEdge = mstEdges.find(e => (e.start === edge.start && e.end === edge.end) || (e.start === edge.end && e.end === edge.start));
-                    const isInMST = !!mstEdge;
-                    const isIntermediate = isInMST && mstEdge.isIntermediate;
+                    const isInMST = mstEdges.some(e => (e.start === edge.start && e.end === edge.end) || (e.start === edge.end && e.end === edge.start));
+                    const isIntermediate = isInMST && mstEdges.find(e => (e.start === edge.start && e.end === edge.end) || (e.start === edge.end && e.end === edge.start)).isIntermediate;
                     return (
                         <g key={index} className={mode === 'delete' ? 'deletable' : ''} 
                            onClick={() => mode === 'delete' && gameState !== 'playing' && deleteEdge(index)}
